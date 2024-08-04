@@ -1,0 +1,15 @@
+
+dotnet tool install --global dotnet-ef --version 6.*
+
+cd MomesCare.Api 
+
+dotnet ef migrations add myMigrations --project 'Context' -c DataContext
+
+dotnet ef database update
+
+dotnet ef database drop
+
+//================================
+
+> Add-Migration  migration_name
+> Update-Database
